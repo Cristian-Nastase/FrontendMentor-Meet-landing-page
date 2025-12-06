@@ -357,4 +357,9 @@ div#footer-content *
         width: 15rem;
         margin-right: var(--spacing-400);
     }
+
+    .section-number
+    {
+        --border-width: 0.125rem;
+    }
 }
