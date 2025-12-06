@@ -13,7 +13,7 @@ This is a solution to the [Meet landing page challenge on Frontend Mentor](https
 
 ### Screenshot
 
-![](./assests/screenshot.png)
+![](./assets/screenshot.png)
 
 ### Links
 
@@ -23,3 +23,4 @@ This is a solution to the [Meet landing page challenge on Frontend Mentor](https
 ## Author
 - GitHub: https://github.com/Cristian-Nastase
 - Frontend Mentor: https://www.frontendmentor.io/profile/Cristian-Nastase
+
