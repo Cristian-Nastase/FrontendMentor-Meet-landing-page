@@ -10,11 +10,13 @@
 body
 {
     min-width: 100vw;
+    min-height: 100vh;
+    
     overflow-x: hidden;
     background-color: var(--white);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 header
