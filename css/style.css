@@ -1,0 +1,360 @@
+@import url(constants.css);
+@import url(components.css);
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    min-width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+header
+{
+    padding: var(--spacing-400);
+    padding-top: var(--spacing-400);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: var(--spacing-100);
+
+    overflow-x: hidden;
+}
+
+section#header-content
+{
+    padding-top: var(--spacing-100);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: var(--spacing-200);
+
+    overflow-x: hidden;
+}
+
+section#header-content h1
+{
+    padding-bottom: var(--spacing-100);
+}
+
+
+header #people-image img
+{
+    scale: 0.7;
+}
+
+div#desktop-hero-left-image,
+div#desktop-hero-right-image
+{
+    visibility: hidden;
+    position: absolute;
+}
+
+.buttons-container
+{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+}
+
+#logo
+{
+    display: grid;
+    place-items: center;
+    margin-top: var(--spacing-500);
+}
+
+section#main-content
+{
+    padding: var(--spacing-400) var(--spacing-400) var(--spacing-800) var(--spacing-400);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: var(--spacing-400);
+}
+
+section.photos-slideshow
+{
+    margin-top: var(--spacing-400);
+    margin-bottom: var(--spacing-400);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    column-gap: var(--spacing-200);
+    row-gap: var(--spacing-200);
+}
+
+section.photos-slideshow img
+{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+
+    border-radius: var(--spacing-100);
+}
+
+div#main-content-header h1
+{
+    margin-top: var(--spacing-200);
+}
+
+
+footer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+footer .section-number
+{
+    z-index: 2;
+    margin-bottom: -1.75rem;
+}
+
+div#footer-content::before
+{
+    content: "";
+    position: absolute;
+    top:0%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cyan-600-background);
+}
+
+div#footer-content
+{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    color:var(--white);
+    gap: var(--spacing-300);
+
+    padding: var(--spacing-800) var(--spacing-400) var(--spacing-800) var(--spacing-400);
+
+    background: url(../assets/mobile/image-footer.jpg) lightgray 50% / cover no-repeat;
+}
+
+div#footer-content > *
+{
+    position: relative;
+    z-index: 3;
+}
+
+div#footer-content p
+{
+    padding: var(--spacing-100) var(--spacing-200) 0 var(--spacing-200);
+    font-weight: 600;
+}
+
+footer .download
+{
+    --download-background-color: var(--purple-600);
+    --download-after-color: var(--purple-300);
+}
+
+div#footer-content *
+{
+    color: var(--white);
+}
+
+/* Mobile fonts */
+
+@media (max-width: 32rem) 
+{
+    :root
+    {
+        --font-header-1-size: 2.7rem;
+        --font-spacing-blue-size: 0.75rem;
+        --font-header-2-size: 2.1rem;
+    }
+}
+
+/* Tablet query */
+
+@media (min-width: 32rem) 
+{
+    :root
+    {
+        --font-header-1-size: 3rem;
+        --font-spacing-blue-size: 0.75rem;
+        --font-header-2-size: 2.5rem;
+        --font-paragraph-medium-size: 1.15rem;
+    }
+
+    header
+    {
+        gap: var(--spacing-200);
+        padding: var(--spacing-800);
+    }
+
+    header div#people-image
+    {
+        scale: 1.3;
+    }
+
+    /* Padding text so it would match the design */
+
+    section#header-content h1,
+    section#header-content p,
+    section#main-content h1,
+    section#main-content p.font-paragraph-medium,
+    div#footer-content p
+    {
+        padding: 0 var(--spacing-1400) 0 var(--spacing-1400);
+    }
+
+    header section#header-content h1
+    {
+        margin-top: var(--spacing-400);
+    }
+
+    header section#header-content div.buttons-container
+    {
+        flex-direction: row;
+    }
+
+    #logo
+    {
+        order: -1;
+    }
+
+    section.photos-slideshow
+    {
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr;
+    }
+
+    div#footer-content
+    {
+        background: url(../assets/tablet/image-footer.jpg) lightgray 50% / cover no-repeat;
+        background-position-y: top;
+    }
+    
+}
+
+/* Desktop query */
+
+@media (min-width: 64rem) 
+{
+    :root
+    {
+        --font-header-1-size: 4rem;
+        --font-spacing-blue-size: 0.75rem;
+        --font-header-2-size: 3rem;
+        --font-paragraph-medium-size: 1.2rem;
+    }
+
+    body
+    {
+        align-items: center;
+    }
+
+    section#main-content h1,
+    section#main-content p.font-paragraph-medium
+    {
+        padding: 0 18rem 0 18rem;
+    }
+
+    section#header-content h1,
+    section#header-content p
+    {
+        width: 100%;
+        padding: 0 9rem 0 9rem;
+    }
+
+    header
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--spacing-1000);
+    }
+
+    header div#people-image
+    {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    div#desktop-hero-left-image,
+    div#desktop-hero-right-image
+    {
+        visibility: visible;
+        position: relative;
+    }
+
+    section#header-content
+    {
+        padding: 0;
+    }
+    
+    div.buttons-container
+    {
+        flex-direction: row;
+    }
+
+    main
+    {
+        width: 80%;
+    }
+    
+    div#footer-content
+    {   
+        padding: var(--spacing-1400);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: var(--spacing-400);
+
+        background: url(../assets/desktop/image-footer.jpg) lightgray 50% / cover no-repeat;
+    }
+
+    div#footer-content > *
+    {
+        margin: var(--spacing-400);
+        text-align: left;
+    }
+
+    div#footer-content p
+    {
+        padding: 0;
+        margin: 0;
+    }
+
+    div#footer-content h1
+    {
+        margin-left: var(--spacing-400);
+    }
+
+    div#footer-content button
+    {
+        text-align: center;
+        width: 15rem;
+        margin-right: var(--spacing-400);
+    }
+}

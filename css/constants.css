@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root
+{
+    /* Colors */
+    --cyan-600-background: rgba(77, 150, 168, 90%);
+    --cyan-600: #4D96A9;
+    --cyan-300: #8FE3F9;
+
+    --purple-600: #855FB1;
+    --purple-300: #D9B8FF;
+    
+    --slate-900: #28283d;
+    --slate-600: #87879D;
+    --slate-300: #D1D1DF;
+
+    --white: #FAFAFA;
+
+    /* Spacing */
+
+    --spacing-1400: 7rem;
+    --spacing-1000: 5rem;
+    --spacing-900: 4.5rem;
+    --spacing-800: 4rem;
+    --spacing-700: 3.5rem;
+    --spacing-500: 2.5rem;
+    --spacing-400: 2rem;
+    --spacing-300: 1.5rem;
+    --spacing-200: 1rem;
+    --spacing-100: .5rem;
+    --spacing-50: .25rem;
+
+    /* Font sizes */
+    --font-header-1-size: 4rem;
+    --font-header-2-size: 2.5rem;
+    --font-spacing-blue-size: 1rem;
+    --font-bold-paragraph-size: 1rem;
+    --font-paragraph-medium-size: 1rem;
+}
+
+*
+{
+    font-family: "Red Hat Display", sans-serif;
+}
+
+/* Fonts classes */
+.font-header-1
+{
+    text-align: center;
+    font-size: var(--font-header-1-size);
+    line-height: 110%;
+    font-weight: 900;
+    letter-spacing: 0px;
+}
+
+.font-header-2
+{
+    text-align: center;
+    font-size: var(--font-header-2-size);
+    line-height: 110%;
+    font-weight: 900;
+    letter-spacing: 0px;
+}
+
+.font-spacing-blue
+{
+    text-align: center;
+    font-size: var(--font-spacing-blue-size);
+    line-height: 110%;
+    letter-spacing: 0.25rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color:var(--cyan-600);
+}
+
+.font-bold-paragraph
+{
+    text-align: center;
+    font-size: var(--font-bold-paragraph-size);
+    line-height: 150%;
+    font-weight: 900;
+    letter-spacing: 0px;
+}
+
+.font-paragraph-medium
+{
+    color: var(--slate-600);
+    text-align: center;
+
+    font-size: var(--font-paragraph-medium-size);
+    font-weight: 500;
+    font-style: normal;
+    line-height: 150%;
+    letter-spacing: 0px;
+}
